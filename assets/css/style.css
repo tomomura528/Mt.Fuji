@@ -1,3 +1,15 @@
-h2 {
-  color: green;
+#wrapper {
+  background-color: #cccccc;
+}
+
+header {
+  background-color: #00ff00;
+}
+
+main {
+  background-color: #ff0000;
+}
+
+footer {
+  background-color: #0000ff;
 }
