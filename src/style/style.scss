@@ -1,16 +1,271 @@
+$eg-font:'Montserrat', sans-serif;
+$font-color:#454545;
+$test:rgba(125,125,200,.5);
+
+*{
+    box-sizing: border-box;
+    color:$font-color;
+    font-size:16px;
+    a{
+        text-decoration: none;
+    }
+}
+
 #wrapper{
-    background-color: #cccccc;
+    width: 1080px;
+    margin: auto;
+  }
+  
+  header{
+        margin-bottom: 56px;
+        .header-top{
+        height: 103px;
+        //   background-color: $test;
+        .logo{
+            height: 31px;
+        //   上下真中合わせはmarginでやってもいい、paddingでやってもいい
+            margin: 36px auto auto 0;
+        }
+        .toggle-btn{
+            display: none;
+        }
+    }
+
+    .main-visual{
+        position: relative;
+        .main-image{
+            width:100%;
+        }
+        .catchcopy{
+            width: 242px;
+            position: absolute;
+            top:52px;
+            right:100px;
+        }
+    }
+
+    #global-nav{
+        ul{
+            display: flex;
+            width: 100%;
+            margin-top:40px;
+            // background-color: $test;
+            .nav-item{
+                width: 180px;
+                height:25px;
+                // background-color: $test;
+                border-right: 2px solid #575757;
+                &:first-child{
+                    border-left: 2px solid #575757;
+                }
+                    a{
+                        display: block;
+                        // background-color: $test;
+                        text-align: center;
+                        line-height:25px;
+                        font-family: $eg-font;
+                        font-weight:600;
+                        text-decoration: none;
+                        color:#454545;
+                        &:hover{
+                            color:#9aaf24;
+                            background-color: #fafafa;
+                        }
+                    }
+                    .here{
+                        color:#9aaf24;
+                    }
+                    
+            }
+        }
+    }
+  }
+
+section{
+margin-bottom:125px;
+}
+h2{
+    width:100%;
+    padding:auto;
+    text-align: center;
+}
+.section-title{
+    font-family: $eg-font;
+    font-size:24px;
+    font-weight: bold;
+    padding:8px 0 8px 0;
+    // background-color: $test;
+    // backgroundのプロパティ、-color,-image,-repeat,-position,→まとめたもの、「background」
+    // インライン要素にもpaddingを設定できる。 
+    background:url("../img/titlebar.png") no-repeat left top;
+    background-size:40px 4px;
+    // background-image:url(..img/titlebar.png);
 }
 
-header{
-    background-color: #ececec83;
+.news-area{
+    height:auto;
+    width:100%;
+    // background-color: $test;
+    padding-top:68px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    h2{
+        margin-bottom:40px;
+    }
+    ul{
+        width:712px;
+        // background-color:#000;
+        padding-bottom:80px;
+        margin-left:180px;
+        li{
+            display: flex;
+            margin-bottom:24px;
+            &:last-child{
+            margin-bottom:0px;
+            }
+            span{
+            display: block;
+            width:130px;
+            height:28px;
+            line-height:28px;
+            background-color: #333333;
+            color:white;
+            font-size: 14px;
+            font-family: $eg-font;
+            font-weight: 600;
+            text-align:center;
+            }
+            .heading{
+                display: block;
+                width:540px;
+                margin-left:40px;
+                line-height:1.75;
+            }
+        }
+    }
 }
 
-main{
-    background-color: #ff000075;
+.features-area{
+    h2{
+        margin-bottom: 75px;
+    }
+    .features-content{
+        display: flex;
+        .features-image{
+            img{
+                width:360px;
+            }
+            margin-right: 56px;
+        }
+        .features-sentence{
+            h3{
+                font-size:24px;
+                margin-bottom: 40px;
+            }
+            p{
+                width:665px;
+                line-height:1.6;
+            }
+        }
+    }
 }
 
+.subscription-area{
+    // 【質問】マウスオーバーでポジションが変わるの調べとく
+    // position: relative;
+    h2{
+        margin-bottom: 50px;
+    }
+    .subscription-caption{
+        width:720px;
+        margin:auto;
+        line-height:1.75;
+        margin-bottom:62px;
+    }
+    .product-list{
+        display:flex;
+        justify-content: space-between;
+        .product-box{
+            width:336px;
+            font-family: $eg-font;
+            font-weight:700;
+            border:4px solid #c9e23f;
+            padding-bottom: 24px;
+            box-shadow: 0 3px 25px 3px rgba(0,0,0,.1);
+            a{ 
+                text-align: center;
+                img{
+                    width:100%;
+                    margin-bottom: 35px;
+                }
+                .product-letters{
+                    .product-class{
+                        font-size:22px;
+                        margin-bottom:24px;
+                    }
+                    .product-price{
+                        margin-bottom:38px;
+                        .¥{
+                            font-size: 32px;
+                        }
+                        .mass{
+                            font-size: 40px;
+                        }
+                        .m{
+                            font-size: 32px;
+                        }
+                    }
+                    .product-caption{
+                        margin-bottom: 22px;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+                .go-to-detail-btn{
+                    height: 50px;
+                    background-color: #eeeeee;
+                    line-height: 50px;
+                    font-size:14px;
+                    margin:0 24px;
+                    // 【質問】動かない！
+                    transition:all 1s ease-out;
+                }
+            }
+            // 【質問】マウスオーバーでポジションが変わるの調べとく
+            // &:hover{
+            //     position: absolute;
+            //     bottom:5px;
+            // }
+            &:hover .go-to-detail-btn{
+                background: rgb(201,226,63);
+                background: linear-gradient(90deg, rgba(201,226,63,1) 0%, rgba(71,227,220,1) 100%);
+            }
+        }
+    }
+}
+.item-area{
+    margin-bottom: 460px;
+    h2{
+        margin-bottom: 72px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{ 
+            // 【質問】vertical-alignでやる方法もあるようだがわからない。
+            margin-bottom:-2px;
+            width:180px;
+            img{
+                width:100%;
+            }
+        }
+    }
+}
 footer{
-    background-color: #0000ff79;
-    margin-bottom: 100px;
+    .copyright{
+        display: block;
+        font-size:14px;
+        text-align:center;
+        margin-bottom:56px;
+    }
 }

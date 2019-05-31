@@ -1,16 +1,298 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #454545;
+  font-size: 16px;
+}
+
+* a {
+  text-decoration: none;
+}
+
 #wrapper {
-  background-color: #cccccc;
+  width: 1080px;
+  margin: auto;
 }
 
 header {
-  background-color: #ececec83;
+  margin-bottom: 56px;
 }
 
-main {
-  background-color: #ff000075;
+header .header-top {
+  height: 103px;
 }
 
-footer {
-  background-color: #0000ff79;
-  margin-bottom: 100px;
+header .header-top .logo {
+  height: 31px;
+  margin: 36px auto auto 0;
+}
+
+header .header-top .toggle-btn {
+  display: none;
+}
+
+header .main-visual {
+  position: relative;
+}
+
+header .main-visual .main-image {
+  width: 100%;
+}
+
+header .main-visual .catchcopy {
+  width: 242px;
+  position: absolute;
+  top: 52px;
+  right: 100px;
+}
+
+header #global-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+header #global-nav ul .nav-item {
+  width: 180px;
+  height: 25px;
+  border-right: 2px solid #575757;
+}
+
+header #global-nav ul .nav-item:first-child {
+  border-left: 2px solid #575757;
+}
+
+header #global-nav ul .nav-item a {
+  display: block;
+  text-align: center;
+  line-height: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #454545;
+}
+
+header #global-nav ul .nav-item a:hover {
+  color: #9aaf24;
+  background-color: #fafafa;
+}
+
+header #global-nav ul .nav-item .here {
+  color: #9aaf24;
+}
+
+section {
+  margin-bottom: 125px;
+}
+
+h2 {
+  width: 100%;
+  padding: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px 0 8px 0;
+  background: url("../img/titlebar.png") no-repeat left top;
+  background-size: 40px 4px;
+}
+
+.news-area {
+  height: auto;
+  width: 100%;
+  padding-top: 68px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+}
+
+.news-area h2 {
+  margin-bottom: 40px;
+}
+
+.news-area ul {
+  width: 712px;
+  padding-bottom: 80px;
+  margin-left: 180px;
+}
+
+.news-area ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.news-area ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.news-area ul li span {
+  display: block;
+  width: 130px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #333333;
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.news-area ul li .heading {
+  display: block;
+  width: 540px;
+  margin-left: 40px;
+  line-height: 1.75;
+}
+
+.features-area h2 {
+  margin-bottom: 75px;
+}
+
+.features-area .features-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features-area .features-content .features-image {
+  margin-right: 56px;
+}
+
+.features-area .features-content .features-image img {
+  width: 360px;
+}
+
+.features-area .features-content .features-sentence h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.features-area .features-content .features-sentence p {
+  width: 665px;
+  line-height: 1.6;
+}
+
+.subscription-area h2 {
+  margin-bottom: 50px;
+}
+
+.subscription-area .subscription-caption {
+  width: 720px;
+  margin: auto;
+  line-height: 1.75;
+  margin-bottom: 62px;
+}
+
+.subscription-area .product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.subscription-area .product-list .product-box {
+  width: 336px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border: 4px solid #c9e23f;
+  padding-bottom: 24px;
+  -webkit-box-shadow: 0 3px 25px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 25px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-area .product-list .product-box a {
+  text-align: center;
+}
+
+.subscription-area .product-list .product-box a img {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.subscription-area .product-list .product-box a .product-letters .product-class {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.subscription-area .product-list .product-box a .product-letters .product-price {
+  margin-bottom: 38px;
+}
+
+.subscription-area .product-list .product-box a .product-letters .product-price .¥ {
+  font-size: 32px;
+}
+
+.subscription-area .product-list .product-box a .product-letters .product-price .mass {
+  font-size: 40px;
+}
+
+.subscription-area .product-list .product-box a .product-letters .product-price .m {
+  font-size: 32px;
+}
+
+.subscription-area .product-list .product-box a .product-letters .product-caption {
+  margin-bottom: 22px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.subscription-area .product-list .product-box a .go-to-detail-btn {
+  height: 50px;
+  background-color: #eeeeee;
+  line-height: 50px;
+  font-size: 14px;
+  margin: 0 24px;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.subscription-area .product-list .product-box:hover .go-to-detail-btn {
+  background: #c9e23f;
+  background: -webkit-gradient(linear, left top, right top, from(#c9e23f), to(#47e3dc));
+  background: -webkit-linear-gradient(left, #c9e23f 0%, #47e3dc 100%);
+  background: -o-linear-gradient(left, #c9e23f 0%, #47e3dc 100%);
+  background: linear-gradient(90deg, #c9e23f 0%, #47e3dc 100%);
+}
+
+.item-area {
+  margin-bottom: 460px;
+}
+
+.item-area h2 {
+  margin-bottom: 72px;
+}
+
+.item-area ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.item-area ul li {
+  margin-bottom: -2px;
+  width: 180px;
+}
+
+.item-area ul li img {
+  width: 100%;
+}
+
+footer .copyright {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 56px;
 }
