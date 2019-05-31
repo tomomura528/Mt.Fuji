@@ -18,7 +18,8 @@
         <img class="toggle-btn" src="assets/img/menu.svg" alt="#" >
     </div>
     <div class="main-visual">
-        <img src="assets/img/mainimage1.png" alt="山との対峙">
+        <img class="main-image" src="assets/img/mainimage1.png" alt="山との対峙">
+        <img class="catchcopy" src="assets/img/catchcopy.png" alt="WORK HARD,PLAY HARD">
         <p>WORK HARD,<br>PLAY HARD</p>
     </div>
     <nav id=grobal-nav>
@@ -41,27 +42,32 @@
                 <a href="#">TAKAOSANオリジナルハードシェルを限定販売いたしました。</a></li>
             <li>
                 <span>2018.11.09</span>
-                <a href="">PFCフリー撥水剤プレゼントキャンペーン実施中</a>
+                <a href="#">PFCフリー撥水剤プレゼントキャンペーン実施中</a>
             </li>
             <li>
                 <span>2018.06.30</span>
-                <a href="">家族参加型 雪上運動会 & 山ガールコラボレーションツアーのご案内。</a>
+                <a href="#">家族参加型 雪上運動会 & 山ガールコラボレーションツアーのご案内。</a>
             </li>
             <li>
                 <span>2018.03.14</span>
-                <a href="">TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a>
+                <a href="#">TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a>
             </li>
         </ul>
     </section>
     <section class="features-area">
-        <h2>FEATURES</h2>
-        <img src="assets/img/features-image.jpg" alt="レインコートを着て物思いに耽る">
-        <h3>アウトドアシーンを想定された防水性</h3>
-        <p>
-            TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。
+<!-- 画像グループと文章グループでdivわけした方が良い -->
+        <div class="image">
+            <h2>FEATURES</h2>
+            <img src="assets/img/features-image.jpg" alt="レインコートを着て物思いに耽る">
+        </div>
+        <div class="features-sentence">
+            <h3>アウトドアシーンを想定された防水性</h3>
+            <p>
+                TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。
 
-            また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
-        </p>
+                また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
+            </p>
+        </div>
     </section><!-- /features-area -->
 
     <section class="subscription">
@@ -70,69 +76,78 @@
 
         <div class="product-list starter">
             <a href="#">
-                <img src="assets/img/subscription-starter-image.jpg" alt="#">
-                <div class="letters">
-                    <p class="class">STARTER</p>
-                    <p class="price">¥2,400/m</p>
-                    <p class="caption">気軽に始められるスタータープラン</p>
+                <div class="product-image">
+                    <img src="assets/img/subscription-starter-image.jpg" alt="#">
+                </div>
+                <div class="product-letters">
+                    <h3 class="product-class">STARTER</h3>
+                    <div class="product-price">¥2,400/m</div>
+                    <p class="product-caption">気軽に始められるスタータープラン</p>
                 </div>
                 <div class="go-to-detail-btn">
-                    <p>詳しくはこちら</p>
+                    詳しくはこちら
                 </div>
             </a>
         </div><!-- /starter -->
 
         <div class="product-list standard">
             <a href="#">
-                <img src="assets/img/subscription-standard-image.jpg" alt="#">
-                <div class="letters">
-                    <p class="class">Standard</p>
-                    <p class="price">¥7,800/m</p>
-                    <p class="caption">当店オススメのスタンダードパック</p>
+                <div class="product-image">
+                   <img src="assets/img/subscription-standard-image.jpg" alt="#">
+                </div>
+                <div class="product-letters">
+                    <h3 class="product-class">Standard</h3>
+                    <div class="product-price">¥7,800/m</div>
+                    <p class="product-caption">当店オススメのスタンダードパック</p>
                 </div>
                 <div class="go-to-detail-btn">
-                    <p>詳しくはこちら</p>
+                    詳しくはこちら
                 </div>
             </a>
         </div><!-- /standard -->
 
         <div class="product-list Master">
             <a href="#">
-                <img src="assets/img/subscription-master-image.jpg" alt="#">
-                <div class="letters">
-                    <p class="class">Master</p>
-                    <p class="price">¥16,400/m</p>
-                    <p class="caption">ハイブランドを毎月お届けします</p>
+                <div class="product-image">
+                    <img src="assets/img/subscription-master-image.jpg" alt="#">
+                </div>
+                <div class="product-letters">
+                    <h3 class="product-class">Master</h3>
+                    <div class="product-price">¥16,400/m</div>
+                    <p class="product-caption">ハイブランドを毎月お届けします</p>
                 </div>
                 <div class="go-to-detail-btn">
-                    <p>詳しくはこちら</p>
+                    詳しくはこちら
                 </div>
             </a>
         </div><!-- /master -->
     </section><!-- /subscript -->
 
-    <section class="items-area">
+    <section class="item-area">
         <h3>ITEMS</h3>
-        <div class="image-list">
-            <a href=""><img src="assets/img/items-image01.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image02.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image03.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image04.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image05.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image06.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image07.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image08.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image09.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image10.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image11.png" alt=""></a>
-            <a href=""><img src="assets/img/items-image12.png" alt=""></a>
+        <div class="item-list">
+            <ul>
+                <li><a href="#"><img src="assets/img/items-image01.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image02.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image03.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image04.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image05.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image06.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image07.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image08.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image09.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image10.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image11.png" alt=""></a></li>
+                <li><a href="#"><img src="assets/img/items-image12.png" alt=""></a></li>
+            </ul>
         </div>
     </section> <!-- /items-area -->
 </main>
 <footer>
-    <div class="copyright">
-        <p>COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</p>
-    </div>
+    <!-- divいらない、pの代わりにsmallタグ -->
+    <small class="copyright">
+        COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.
+    </small>
 </footer>
 </div><!-- /wrapper -->
 </body>
