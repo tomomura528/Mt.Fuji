@@ -1,6 +1,15 @@
 $eg-font:'Montserrat', sans-serif;
 $font-color:#454545;
 $test:rgba(125,125,200,.5);
+// responsive
+$resp:768px;
+
+// sassでメディアクエリを書くときのフォーマット
+@mixin resp {
+    @media(max-width:($resp)){
+        @content;
+    }
+}
 
 *{  
     box-sizing: border-box;
@@ -14,6 +23,11 @@ $test:rgba(125,125,200,.5);
 #wrapper{
     width: 1080px;
     margin: auto;
+
+    @include resp{
+        // background-color:$test;
+        width:100%;
+    }
   }
   
   header{
@@ -21,17 +35,38 @@ $test:rgba(125,125,200,.5);
         .header-top{
         height: 103px;
         //   background-color: $test;
+            @include resp{
+                width:100%;
+                display: flex;
+                padding:0 3% 0 3%;
+                height: 140px;
+            }
         .logo{
             height: 31px;
         //   上下真中合わせはmarginでやってもいい、paddingでやってもいい
             margin: 36px auto auto 0;
+            @include resp{
+                height:56px;
+                line-height:140px;
+            }
         }
         .toggle-btn{
             display: none;
+            @include resp{
+                display: block;
+                height:48px;
+                position: fixed;
+                top:45px;
+                right:5%;
+                z-index: 1;
+            }
         }
     }
-
     .main-visual{
+
+        @include resp{
+            margin-bottom:112px;
+        }
         position: relative;
         .main-image{
             width:100%;
@@ -41,10 +76,17 @@ $test:rgba(125,125,200,.5);
             position: absolute;
             top:52px;
             right:100px;
+            @include resp{
+                top:52px;
+                right:30px;
+            }
         }
     }
 
     #global-nav{
+        @include resp{
+            display: none;
+        }
         ul{
             display: flex;
             width: 100%;
@@ -81,6 +123,12 @@ $test:rgba(125,125,200,.5);
     }
   }
 
+main{
+    @include resp{
+        padding:0 3% 0 3%;
+        background-color:$test;
+    }
+}
 section{
 margin-bottom:125px;
 }
@@ -100,6 +148,12 @@ h2{
     background:url("../img/titlebar.png") no-repeat left top;
     background-size:40px 4px;
     // background-image:url(..img/titlebar.png);
+
+    @include resp{
+        font-size: 48px;
+        background-size: 80px 8px;
+        padding:19px 0 19px 0;
+    }
 }
 
 .news-area{
@@ -109,8 +163,14 @@ h2{
     padding-top:68px;
     background-color: #fafafa;
     border: 1px solid #eeeeee;
+    @include resp{
+        padding:87px 50px 112px 50px;
+    }
     h2{
         margin-bottom:40px;
+        @include resp{
+            margin-bottom:61px;
+        }
     }
     ul{
         width:712px;
@@ -123,6 +183,9 @@ h2{
             &:last-child{
             margin-bottom:0px;
             }
+            @include resp{
+                display: block;
+            }
             span{
             display: block;
             width:130px;
@@ -134,12 +197,24 @@ h2{
             font-family: $eg-font;
             font-weight: 600;
             text-align:center;
+            @include resp{
+                width:226px;
+                height:52px;
+                line-height: 52px;
+                font-size: 24px;
+            }
             }
             .heading{
                 display: block;
                 width:540px;
                 margin-left:40px;
                 line-height:1.75;
+                @include resp{
+                    width:605px;
+                    margin:auto;
+                    font-size:32px;
+                    line-height: 1.5;
+                }
             }
         }
     }
@@ -171,8 +246,6 @@ h2{
 }
 
 .subscription-area{
-    // 【質問】マウスオーバーでポジションが変わるの調べとく
-    // position: relative;
     h2{
         margin-bottom: 50px;
     }
@@ -185,60 +258,64 @@ h2{
     .product-list{
         display:flex;
         justify-content: space-between;
-        .product-box{
+        a{ 
             width:336px;
+            display: block;
+            padding-bottom: 24px;
             font-family: $eg-font;
             font-weight:700;
+            text-align: center;
             border:4px solid #c9e23f;
-            padding-bottom: 24px;
             box-shadow: 0 3px 25px 3px rgba(0,0,0,.1);
-            a{ 
-                text-align: center;
-                img{
-                    width:100%;
-                    margin-bottom: 35px;
-                }
-                .product-letters{
-                    .product-class{
-                        font-size:22px;
-                        margin-bottom:24px;
-                    }
-                    .product-price{
-                        margin-bottom:38px;
-                        .¥{
-                            font-size: 32px;
-                        }
-                        .mass{
-                            font-size: 40px;
-                        }
-                        .m{
-                            font-size: 32px;
-                        }
-                    }
-                    .product-caption{
-                        margin-bottom: 22px;
-                        font-size: 14px;
-                        font-weight: 400;
-                    }
-                }
+
+            position: relative;
+            top:0px;
+            // ease-in:始めが早い ease-out:終わりが早い
+            transition:all .2s ease-out;
+
+            &:hover {
+                top: -5px;
+                // グラデーションプロパティにはtransition無効
+                // transformプロパティ　アニメーションがぬるぬる 参考→https://qiita.com/watamura/items/998a8e34c1e1f7504fdd
+                // trasform:translate(Xpx,Ypx) rotate(100deg);
                 .go-to-detail-btn{
-                    height: 50px;
-                    background-color: #eeeeee;
-                    line-height: 50px;
-                    font-size:14px;
-                    margin:0 24px;
-                    // 【質問】動かない！
-                    transition:all 1s ease-out;
+                    background: rgb(201,226,63);
+                    background: linear-gradient(90deg, rgba(201,226,63,1) 0%, rgba(71,227,220,1) 100%);
                 }
             }
-            // 【質問】マウスオーバーでポジションが変わるの調べとく
-            // &:hover{
-            //     position: absolute;
-            //     bottom:5px;
-            // }
-            &:hover .go-to-detail-btn{
-                background: rgb(201,226,63);
-                background: linear-gradient(90deg, rgba(201,226,63,1) 0%, rgba(71,227,220,1) 100%);
+            img{
+                width:100%;
+                margin-bottom: 35px;
+            }
+            .product-letters{
+                .product-class{
+                    font-size:22px;
+                    margin-bottom:24px;
+                }
+                .product-price{
+                    margin-bottom:38px;
+                    .¥{
+                        font-size: 32px;
+                    }
+                    .mass{
+                        font-size: 40px;
+                    }
+                    .m{
+                        font-size: 32px;
+                    }
+                }
+                .product-caption{
+                    margin-bottom: 22px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+            .go-to-detail-btn{
+                height: 50px;
+                background-color: #eeeeee;
+                line-height: 50px;
+                font-size:14px;
+                margin:0 24px;
             }
         }
     }

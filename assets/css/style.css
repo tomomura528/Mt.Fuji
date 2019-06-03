@@ -15,6 +15,12 @@
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  #wrapper {
+    width: 100%;
+  }
+}
+
 header {
   margin-bottom: 56px;
 }
@@ -23,17 +29,52 @@ header .header-top {
   height: 103px;
 }
 
+@media (max-width: 768px) {
+  header .header-top {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 3% 0 3%;
+    height: 140px;
+  }
+}
+
 header .header-top .logo {
   height: 31px;
   margin: 36px auto auto 0;
+}
+
+@media (max-width: 768px) {
+  header .header-top .logo {
+    height: 56px;
+    line-height: 140px;
+  }
 }
 
 header .header-top .toggle-btn {
   display: none;
 }
 
+@media (max-width: 768px) {
+  header .header-top .toggle-btn {
+    display: block;
+    height: 48px;
+    position: fixed;
+    top: 45px;
+    right: 5%;
+    z-index: 1;
+  }
+}
+
 header .main-visual {
   position: relative;
+}
+
+@media (max-width: 768px) {
+  header .main-visual {
+    margin-bottom: 112px;
+  }
 }
 
 header .main-visual .main-image {
@@ -45,6 +86,19 @@ header .main-visual .catchcopy {
   position: absolute;
   top: 52px;
   right: 100px;
+}
+
+@media (max-width: 768px) {
+  header .main-visual .catchcopy {
+    top: 52px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  header #global-nav {
+    display: none;
+  }
 }
 
 header #global-nav ul {
@@ -84,6 +138,13 @@ header #global-nav ul .nav-item .here {
   color: #9aaf24;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding: 0 3% 0 3%;
+    background-color: rgba(125, 125, 200, 0.5);
+  }
+}
+
 section {
   margin-bottom: 125px;
 }
@@ -103,6 +164,14 @@ h2 {
   background-size: 40px 4px;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 48px;
+    background-size: 80px 8px;
+    padding: 19px 0 19px 0;
+  }
+}
+
 .news-area {
   height: auto;
   width: 100%;
@@ -111,8 +180,20 @@ h2 {
   border: 1px solid #eeeeee;
 }
 
+@media (max-width: 768px) {
+  .news-area {
+    padding: 87px 50px 112px 50px;
+  }
+}
+
 .news-area h2 {
   margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .news-area h2 {
+    margin-bottom: 61px;
+  }
 }
 
 .news-area ul {
@@ -132,6 +213,12 @@ h2 {
   margin-bottom: 0px;
 }
 
+@media (max-width: 768px) {
+  .news-area ul li {
+    display: block;
+  }
+}
+
 .news-area ul li span {
   display: block;
   width: 130px;
@@ -145,11 +232,29 @@ h2 {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .news-area ul li span {
+    width: 226px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 24px;
+  }
+}
+
 .news-area ul li .heading {
   display: block;
   width: 540px;
   margin-left: 40px;
   line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .news-area ul li .heading {
+    width: 605px;
+    margin: auto;
+    font-size: 32px;
+    line-height: 1.5;
+  }
 }
 
 .features-area h2 {
@@ -200,69 +305,73 @@ h2 {
   justify-content: space-between;
 }
 
-.subscription-area .product-list .product-box {
+.subscription-area .product-list a {
   width: 336px;
+  display: block;
+  padding-bottom: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  text-align: center;
   border: 4px solid #c9e23f;
-  padding-bottom: 24px;
   -webkit-box-shadow: 0 3px 25px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 25px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0px;
+  -webkit-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
-.subscription-area .product-list .product-box a {
-  text-align: center;
+.subscription-area .product-list a:hover {
+  top: -5px;
 }
 
-.subscription-area .product-list .product-box a img {
-  width: 100%;
-  margin-bottom: 35px;
-}
-
-.subscription-area .product-list .product-box a .product-letters .product-class {
-  font-size: 22px;
-  margin-bottom: 24px;
-}
-
-.subscription-area .product-list .product-box a .product-letters .product-price {
-  margin-bottom: 38px;
-}
-
-.subscription-area .product-list .product-box a .product-letters .product-price .¥ {
-  font-size: 32px;
-}
-
-.subscription-area .product-list .product-box a .product-letters .product-price .mass {
-  font-size: 40px;
-}
-
-.subscription-area .product-list .product-box a .product-letters .product-price .m {
-  font-size: 32px;
-}
-
-.subscription-area .product-list .product-box a .product-letters .product-caption {
-  margin-bottom: 22px;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.subscription-area .product-list .product-box a .go-to-detail-btn {
-  height: 50px;
-  background-color: #eeeeee;
-  line-height: 50px;
-  font-size: 14px;
-  margin: 0 24px;
-  -webkit-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-}
-
-.subscription-area .product-list .product-box:hover .go-to-detail-btn {
+.subscription-area .product-list a:hover .go-to-detail-btn {
   background: #c9e23f;
   background: -webkit-gradient(linear, left top, right top, from(#c9e23f), to(#47e3dc));
   background: -webkit-linear-gradient(left, #c9e23f 0%, #47e3dc 100%);
   background: -o-linear-gradient(left, #c9e23f 0%, #47e3dc 100%);
   background: linear-gradient(90deg, #c9e23f 0%, #47e3dc 100%);
+}
+
+.subscription-area .product-list a img {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.subscription-area .product-list a .product-letters .product-class {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.subscription-area .product-list a .product-letters .product-price {
+  margin-bottom: 38px;
+}
+
+.subscription-area .product-list a .product-letters .product-price .¥ {
+  font-size: 32px;
+}
+
+.subscription-area .product-list a .product-letters .product-price .mass {
+  font-size: 40px;
+}
+
+.subscription-area .product-list a .product-letters .product-price .m {
+  font-size: 32px;
+}
+
+.subscription-area .product-list a .product-letters .product-caption {
+  margin-bottom: 22px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.subscription-area .product-list a .go-to-detail-btn {
+  height: 50px;
+  background-color: #eeeeee;
+  line-height: 50px;
+  font-size: 14px;
+  margin: 0 24px;
 }
 
 .item-area {
