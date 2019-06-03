@@ -33,7 +33,7 @@ $resp:768px;
         width:100%;
     }
   }
-  
+
 #header-wrapper{
         margin-bottom: 56px;
         .header-top{
@@ -93,7 +93,6 @@ $resp:768px;
             }
         }
     }
-
     #global-nav{
         @include resp{
             display: none;
@@ -163,6 +162,7 @@ $resp:768px;
     height:auto;
     width:100%;
     // background-color: $test;
+    margin-bottom:136px;
     padding-top:68px;
     background-color: #fafafa;
     border: 1px solid #eeeeee;
