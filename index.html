@@ -15,29 +15,29 @@
 
 <body>
 <div id="wrapper">
-    <header>
-    <div class="header-top">
-        <h1><img class="logo" src="assets/img/logo.svg" alt="TAKAOSAN"></h1>
-        <img class="toggle-btn" src="assets/img/menu.svg" alt="#" >
-    </div>
-    <div class="main-visual">
-        <img class="main-image" src="assets/img/mainimage1.png" alt="山との対峙">
-        <img class="catchcopy" src="assets/img/catchcopy.png" alt="WORK HARD,PLAY HARD">
-    </div>
-    <nav id=global-nav>
-        <ul>
-            <li class="nav-item"><a class="here" href="#">HOME</a></li>
-            <li class="nav-item"><a href="#">ABOUT</a></li>
-            <li class="nav-item"><a href="#">SHOP</a></li>
-            <li class="nav-item"><a href="#">ACCESS</a></li>
-            <li class="nav-item"><a href="#">BLOG</a></li>
-            <li class="nav-item"><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
+    <header id=header-wrapper>
+        <div class="header-top">
+            <h1><img class="logo" src="assets/img/logo.svg" alt="TAKAOSAN"></h1>
+            <img class="toggle-btn" src="assets/img/menu.svg" alt="#" >
+        </div>
+        <div class="main-visual">
+            <img class="main-image" src="assets/img/mainimage1.png" alt="山との対峙">
+            <img class="catchcopy" src="assets/img/catchcopy.png" alt="WORK HARD,PLAY HARD">
+        </div>
+        <nav id="global-nav">
+            <ul>
+                <li class="nav-item"><a class="here" href="#">HOME</a></li>
+                <li class="nav-item"><a href="#">ABOUT</a></li>
+                <li class="nav-item"><a href="#">SHOP</a></li>
+                <li class="nav-item"><a href="#">ACCESS</a></li>
+                <li class="nav-item"><a href="#">BLOG</a></li>
+                <li class="nav-item"><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
         <main>
-            <section class="news-area">
-                <h2><span class="section-title">NEWS</span></h2>
+            <section class="news-area contents-title">
+                <h2 class="section-header"><span class="section-title">NEWS</span></h2>
                 <ul>
                     <li>
                         <span>2018.12.17</span>
@@ -58,8 +58,8 @@
                 </ul>
             </section><!-- /news-area -->
 
-            <section class="features-area">
-                <h2><span class="section-title">FEATURES</span></h2>
+            <section class="features-area contents-title">
+                <h2 class="section-header"><span class="section-title">FEATURES</span></h2>
                 <!-- 画像グループと文章グループでdivわけした方が良い -->
                 <div class="features-content">
                     <div class="features-image">
@@ -67,77 +67,90 @@
                     </div>
                     <div class="features-sentence">
                         <h3>アウトドアシーンを想定された防水性</h3>
-                        <p>
-                            TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。<br>
-                            <br>
+                        <p class="features-p1">
+                            TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。
+                        </p>
+                        <p class="features-p2">
                             また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
                         </p>
                     </div>
                 </div>
             </section><!-- /features-area -->
 
-            <section class="subscription-area">
-                <h2><span class="section-title">SUBSCRIPTION</span></h2>
+            <section class="subscription-area contents-title">
+                <h2 class="section-header"><span class="section-title">SUBSCRIPTION</span></h2>
                 <p class="subscription-caption">TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。</p>
-                <div class="product-list">
-                        <a href="#">
-                            <div class="product-image">
-                                <img src="assets/img/subscription-starter-image.jpg" alt="#">
-                            </div>
-                            <div class="product-letters">
-                                <h3 class="product-class">Starter</h3>
-                                <div class="product-price">
-                                    <span class="¥">¥</span>
-                                    <span class="mass">2,400</span>
-                                    <span class="m">/m</span>
-                                </div>
-                                <p class="product-caption">気軽に始められるスターターパック</p>
-                            </div>
-                            <div class="go-to-detail-btn">
-                                詳しくはこちら
-                            </div>
-                        </a><!-- /starter -->
+                <ul class="product-list">
+                    <section>
+                        <li>
+                            <a href="#">
+                                <figure class="product-image">
+                                    <img src="assets/img/subscription-starter-image.jpg" alt="#">
+                                    <figcaption class="product-letters">
+                                        <h3 class="product-class">Starter</h3>
+                                        <p class="product-price">
+                                            <span class="¥">¥</span>
+                                            <span class="mass">2,400</span>
+                                            <span class="m">/m</span>
+                                        </p>
+                                        <p class="product-caption">気軽に始められるスターターパック</p>
+                                        <div class="go-to-detail-btn">
+                                            詳しくはこちら
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </section><!-- /starter -->
 
-                        <a href="#">
-                            <div class="product-image">
-                            <img src="assets/img/subscription-standard-image.jpg" alt="#">
-                            </div>
-                            <div class="product-letters">
-                                <h3 class="product-class">Standard</h3>
-                                <div class="product-price">
-                                    <span class="¥">¥</span>
-                                    <span class="mass">7,800</span>
-                                    <span class="m">/m</span>
-                                </div>
-                                <p class="product-caption">当店オススメのスタンダードパック</p>
-                            </div>
-                            <div class="go-to-detail-btn">
-                                詳しくはこちら
-                            </div>
-                        </a><!-- /standard -->
+                    <section>
+                        <li>
+                            <a href="#">
+                                <figure class="product-image">
+                                    <img src="assets/img/subscription-standard-image.jpg" alt="#">
+                                    <figcaption class="product-letters">
+                                        <h3 class="product-class">Standard</h3>
+                                        <p class="product-price">
+                                            <span class="¥">¥</span>
+                                            <span class="mass">7,800</span>
+                                            <span class="m">/m</span>
+                                        </p>
+                                        <p class="product-caption">当店オススメのスタンダードパック</p>
+                                        <div class="go-to-detail-btn">
+                                            詳しくはこちら
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </section><!-- /standard -->
 
-                        <a href="#">
-                            <div class="product-image">
-                                <img src="assets/img/subscription-master-image.jpg" alt="#">
-                            </div>
-                            <div class="product-letters">
-                                <h3 class="product-class">Master</h3>
-                                <div class="product-price">
-                                    <span class="¥">¥</span>
-                                    <span class="mass">16,400</span>
-                                    <span class="m">/m</span>
-                                </div>
-                                <p class="product-caption">ハイブランドを毎月お届けします</p>
-                            </div>
-                            <div class="go-to-detail-btn">
-                                詳しくはこちら
-                            </div>
-                        </a><!-- /master -->
-                </div><!-- /product-list -->
+                    <section>
+                        <li>
+                            <a href="#">
+                                <figure class="product-image">
+                                    <img src="assets/img/subscription-master-image.jpg" alt="#">
+                                    <figcaption class="product-letters">
+                                        <h3 class="product-class">Master</h3>
+                                        <p class="product-price">
+                                            <span class="¥">¥</span>
+                                            <span class="mass">16,400</span>
+                                            <span class="m">/m</span>
+                                        </p>
+                                        <p class="product-caption">ハイブランドを毎月お届けします</p>
+                                        <div class="go-to-detail-btn">
+                                            詳しくはこちら
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a><!-- /master -->
+                        </li>
+                    </section>
+                </ul><!-- /product-list -->
             </section><!-- /subscript -->
 
-            <section class="item-area">
-                <h2><span class="section-title">ITEMS</span></h2>
+            <section class="item-area contents-title">
+                <h2 class="section-header"><span class="section-title">ITEMS</span></h2>
                 <div class="item-list">
                     <ul>
                         <li><a href="#"><img src="assets/img/items-image01.png" alt=""></a></li>

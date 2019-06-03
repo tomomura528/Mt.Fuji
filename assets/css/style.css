@@ -28,16 +28,16 @@
   }
 }
 
-header {
+#header-wrapper {
   margin-bottom: 56px;
 }
 
-header .header-top {
+#header-wrapper .header-top {
   height: 103px;
 }
 
 @media (max-width: 768px) {
-  header .header-top {
+  #header-wrapper .header-top {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -48,13 +48,13 @@ header .header-top {
   }
 }
 
-header .header-top .logo {
+#header-wrapper .header-top .logo {
   height: 31px;
   margin: 36px auto auto 0;
 }
 
 @media (max-width: 768px) {
-  header .header-top .logo {
+  #header-wrapper .header-top .logo {
     height: 28px;
     width: 187px;
     margin: auto;
@@ -62,12 +62,12 @@ header .header-top .logo {
   }
 }
 
-header .header-top .toggle-btn {
+#header-wrapper .header-top .toggle-btn {
   display: none;
 }
 
 @media (max-width: 768px) {
-  header .header-top .toggle-btn {
+  #header-wrapper .header-top .toggle-btn {
     display: inline-block;
     width: 33px;
     height: 24px;
@@ -78,22 +78,23 @@ header .header-top .toggle-btn {
   }
 }
 
-header .main-visual {
+#header-wrapper .main-visual {
+  width: 100%;
   position: relative;
 }
 
 @media (max-width: 768px) {
-  header .main-visual {
+  #header-wrapper .main-visual {
     margin-bottom: 56px;
     width: 100%;
   }
 }
 
-header .main-visual .main-image {
+#header-wrapper .main-visual .main-image {
   width: 100%;
 }
 
-header .main-visual .catchcopy {
+#header-wrapper .main-visual .catchcopy {
   width: 242px;
   position: absolute;
   top: 52px;
@@ -101,7 +102,7 @@ header .main-visual .catchcopy {
 }
 
 @media (max-width: 768px) {
-  header .main-visual .catchcopy {
+  #header-wrapper .main-visual .catchcopy {
     top: 26px;
     right: 15px;
     width: 141px;
@@ -109,12 +110,12 @@ header .main-visual .catchcopy {
 }
 
 @media (max-width: 768px) {
-  header #global-nav {
+  #header-wrapper #global-nav {
     display: none;
   }
 }
 
-header #global-nav ul {
+#header-wrapper #global-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,17 +123,17 @@ header #global-nav ul {
   margin-top: 40px;
 }
 
-header #global-nav ul .nav-item {
+#header-wrapper #global-nav ul .nav-item {
   width: 180px;
   height: 25px;
   border-right: 2px solid #575757;
 }
 
-header #global-nav ul .nav-item:first-child {
+#header-wrapper #global-nav ul .nav-item:first-child {
   border-left: 2px solid #575757;
 }
 
-header #global-nav ul .nav-item a {
+#header-wrapper #global-nav ul .nav-item a {
   display: block;
   text-align: center;
   line-height: 25px;
@@ -142,26 +143,26 @@ header #global-nav ul .nav-item a {
   color: #454545;
 }
 
-header #global-nav ul .nav-item a:hover {
+#header-wrapper #global-nav ul .nav-item a:hover {
   color: #9aaf24;
   background-color: #fafafa;
 }
 
-header #global-nav ul .nav-item .here {
+#header-wrapper #global-nav ul .nav-item .here {
   color: #9aaf24;
 }
 
-section {
+.contents-title {
   margin-bottom: 125px;
 }
 
 @media (max-width: 768px) {
-  section {
+  .contents-title {
     margin-bottom: auto;
   }
 }
 
-h2 {
+.section-header {
   width: 100%;
   text-align: center;
 }
@@ -351,6 +352,10 @@ h2 {
   }
 }
 
+.features-area .features-content .features-sentence .features-p1 {
+  margin-bottom: 24px;
+}
+
 @media (max-width: 768px) {
   .subscription-area {
     width: 94%;
@@ -398,7 +403,7 @@ h2 {
   }
 }
 
-.subscription-area .product-list a {
+.subscription-area .product-list li a {
   width: 336px;
   display: block;
   padding-bottom: 24px;
@@ -415,11 +420,11 @@ h2 {
   transition: all .2s ease-out;
 }
 
-.subscription-area .product-list a:hover {
+.subscription-area .product-list li a:hover {
   top: -5px;
 }
 
-.subscription-area .product-list a:hover .go-to-detail-btn {
+.subscription-area .product-list li a:hover .go-to-detail-btn {
   background: #c9e23f;
   background: -webkit-gradient(linear, left top, right top, from(#c9e23f), to(#47e3dc));
   background: -webkit-linear-gradient(left, #c9e23f 0%, #47e3dc 100%);
@@ -428,67 +433,68 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .subscription-area .product-list a {
+  .subscription-area .product-list li a {
     width: 100%;
     margin-bottom: 25px;
     padding-bottom: 0px;
   }
 }
 
-.subscription-area .product-list a img {
+.subscription-area .product-list li a img {
+  width: 100%;
   margin-bottom: 35px;
 }
 
-.subscription-area .product-list a .product-letters .product-class {
+.subscription-area .product-list li a .product-letters .product-class {
   font-size: 22px;
   margin-bottom: 24px;
 }
 
 @media (max-width: 768px) {
-  .subscription-area .product-list a .product-letters .product-class {
+  .subscription-area .product-list li a .product-letters .product-class {
     margin-bottom: 20px;
     width: 100%;
   }
 }
 
-.subscription-area .product-list a .product-letters .product-price {
+.subscription-area .product-list li a .product-letters .product-price {
   margin-bottom: 38px;
   line-height: 1;
 }
 
 @media (max-width: 768px) {
-  .subscription-area .product-list a .product-letters .product-price {
+  .subscription-area .product-list li a .product-letters .product-price {
     margin-bottom: 30px;
   }
 }
 
-.subscription-area .product-list a .product-letters .product-price .¥ {
+.subscription-area .product-list li a .product-letters .product-price .¥ {
   font-size: 32px;
 }
 
-.subscription-area .product-list a .product-letters .product-price .mass {
+.subscription-area .product-list li a .product-letters .product-price .mass {
   font-size: 40px;
 }
 
-.subscription-area .product-list a .product-letters .product-price .m {
+.subscription-area .product-list li a .product-letters .product-price .m {
   font-size: 32px;
 }
 
-.subscription-area .product-list a .product-letters .product-caption {
+.subscription-area .product-list li a .product-letters .product-caption {
   margin-bottom: 22px;
   font-size: 14px;
   font-weight: 400;
 }
 
 @media (max-width: 768px) {
-  .subscription-area .product-list a .product-letters .product-caption {
+  .subscription-area .product-list li a .product-letters .product-caption {
     font-size: 16px;
     font-weight: 100;
     margin-bottom: 29px;
   }
 }
 
-.subscription-area .product-list a .go-to-detail-btn {
+.subscription-area .product-list li a .go-to-detail-btn {
   height: 50px;
   background-color: #eeeeee;
   line-height: 50px;
@@ -497,7 +503,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .subscription-area .product-list a .go-to-detail-btn {
+  .subscription-area .product-list li a .go-to-detail-btn {
     height: 56px;
     width: auto;
     font-size: 16px;
