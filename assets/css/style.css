@@ -44,7 +44,7 @@ header .header-top {
     display: flex;
     padding: 0 5% 0 5%;
     margin: auto;
-    height: 140px;
+    height: 70px;
   }
 }
 
@@ -55,9 +55,10 @@ header .header-top .logo {
 
 @media (max-width: 768px) {
   header .header-top .logo {
-    height: 56px;
-    width: 374px;
-    line-height: 140px;
+    height: 28px;
+    width: 187px;
+    margin: auto;
+    margin-top: 20px;
   }
 }
 
@@ -68,10 +69,10 @@ header .header-top .toggle-btn {
 @media (max-width: 768px) {
   header .header-top .toggle-btn {
     display: inline-block;
-    width: 66px;
-    height: 48px;
+    width: 33px;
+    height: 24px;
     position: fixed;
-    top: 45px;
+    top: 22px;
     right: 5%;
     z-index: 1;
   }
@@ -83,7 +84,8 @@ header .main-visual {
 
 @media (max-width: 768px) {
   header .main-visual {
-    margin-bottom: 112px;
+    margin-bottom: 56px;
+    width: 100%;
   }
 }
 
@@ -100,8 +102,9 @@ header .main-visual .catchcopy {
 
 @media (max-width: 768px) {
   header .main-visual .catchcopy {
-    top: 52px;
-    right: 30px;
+    top: 26px;
+    right: 15px;
+    width: 141px;
   }
 }
 
@@ -172,14 +175,6 @@ h2 {
   background-size: 40px 4px;
 }
 
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 48px;
-    background-size: 80px 8px;
-    padding: 18px 0 0 0;
-  }
-}
-
 .news-area {
   height: auto;
   width: 100%;
@@ -191,8 +186,8 @@ h2 {
 @media (max-width: 768px) {
   .news-area {
     width: 94%;
-    padding: 112px 50px 112px 50px;
-    margin: 0 auto 113px auto;
+    padding: 56px 25px 56px 25px;
+    margin: 0 auto 56px auto;
   }
 }
 
@@ -202,7 +197,7 @@ h2 {
 
 @media (max-width: 768px) {
   .news-area h2 {
-    margin-bottom: 61px;
+    margin-bottom: 30px;
   }
 }
 
@@ -234,7 +229,7 @@ h2 {
 @media (max-width: 768px) {
   .news-area ul li {
     display: block;
-    margin-bottom: 43px;
+    margin-bottom: 20px;
   }
   .news-area ul li:last-child {
     margin-bottom: 0px;
@@ -256,11 +251,11 @@ h2 {
 
 @media (max-width: 768px) {
   .news-area ul li span {
-    width: 226px;
-    height: 52px;
-    line-height: 52px;
-    font-size: 24px;
-    margin-bottom: 24px;
+    width: 113px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    margin-bottom: 12px;
   }
 }
 
@@ -273,9 +268,9 @@ h2 {
 
 @media (max-width: 768px) {
   .news-area ul li .heading {
-    width: 605px;
+    width: 302px;
     margin-left: 0;
-    font-size: 32px;
+    font-size: 16px;
     line-height: 1.5;
     text-decoration: underline;
   }
@@ -284,7 +279,7 @@ h2 {
 @media (max-width: 768px) {
   .features-area {
     width: 86%;
-    margin: 0 auto 244px auto;
+    margin: 0 auto 122px auto;
   }
 }
 
@@ -294,7 +289,7 @@ h2 {
 
 @media (max-width: 768px) {
   .features-area h2 {
-    margin-bottom: 88px;
+    margin-bottom: 44px;
   }
 }
 
@@ -327,7 +322,7 @@ h2 {
 @media (max-width: 768px) {
   .features-area .features-content .features-image {
     margin-right: 0px;
-    margin-bottom: 61px;
+    margin-bottom: 30px;
   }
 }
 
@@ -338,9 +333,8 @@ h2 {
 
 @media (max-width: 768px) {
   .features-area .features-content .features-sentence h3 {
-    font-size: 48px;
     line-height: 1.75;
-    margin-bottom: 96px;
+    margin-bottom: 48px;
   }
 }
 
@@ -351,7 +345,8 @@ h2 {
 
 @media (max-width: 768px) {
   .features-area .features-content .features-sentence p {
-    font-size: 32px;
+    width: 100%;
+    font-size: 16px;
     line-height: 1.75;
   }
 }
@@ -382,8 +377,8 @@ h2 {
 
 @media (max-width: 768px) {
   .subscription-area .subscription-caption {
-    font-size: 32px;
-    width: auto;
+    font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -435,8 +430,7 @@ h2 {
 @media (max-width: 768px) {
   .subscription-area .product-list a {
     width: 100%;
-    border: 8px solid #c9e23f;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     padding-bottom: 0px;
   }
 }
@@ -452,8 +446,7 @@ h2 {
 
 @media (max-width: 768px) {
   .subscription-area .product-list a .product-letters .product-class {
-    font-size: 44px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     width: 100%;
   }
 }
@@ -465,7 +458,7 @@ h2 {
 
 @media (max-width: 768px) {
   .subscription-area .product-list a .product-letters .product-price {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 
@@ -473,30 +466,12 @@ h2 {
   font-size: 32px;
 }
 
-@media (max-width: 768px) {
-  .subscription-area .product-list a .product-letters .product-price .¥ {
-    font-size: 64px;
-  }
-}
-
 .subscription-area .product-list a .product-letters .product-price .mass {
   font-size: 40px;
 }
 
-@media (max-width: 768px) {
-  .subscription-area .product-list a .product-letters .product-price .mass {
-    font-size: 80px;
-  }
-}
-
 .subscription-area .product-list a .product-letters .product-price .m {
   font-size: 32px;
-}
-
-@media (max-width: 768px) {
-  .subscription-area .product-list a .product-letters .product-price .m {
-    font-size: 64px;
-  }
 }
 
 .subscription-area .product-list a .product-letters .product-caption {
@@ -507,9 +482,9 @@ h2 {
 
 @media (max-width: 768px) {
   .subscription-area .product-list a .product-letters .product-caption {
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 100;
-    margin-bottom: 58px;
+    margin-bottom: 29px;
   }
 }
 
@@ -523,12 +498,12 @@ h2 {
 
 @media (max-width: 768px) {
   .subscription-area .product-list a .go-to-detail-btn {
-    height: 112px;
+    height: 56px;
     width: auto;
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 100;
-    line-height: 112px;
-    margin: 0 40px 40px 40px;
+    line-height: 56px;
+    margin: 0 20px 20px 20px;
   }
 }
 
@@ -566,7 +541,7 @@ h2 {
 @media (max-width: 768px) {
   .item-area ul li {
     width: 33.3%;
-    margin-bottom: -8px;
+    margin-bottom: -2px;
   }
 }
 
@@ -583,8 +558,7 @@ footer .copyright {
 
 @media (max-width: 768px) {
   footer .copyright {
-    font-size: 25.6px;
-    margin-bottom: 314px;
+    margin-bottom: 157px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
   }
