@@ -37,7 +37,7 @@ $resp:768px;
 #header-wrapper{
         margin-bottom: 56px;
         .header-top{
-        height: 103px;
+            height: 103px;
         //   background-color: $test;
             @include resp{
                 width:100%;
@@ -97,7 +97,7 @@ $resp:768px;
         @include resp{
             display: none;
         }
-        ul{
+        .nav-list{
             display: flex;
             width: 100%;
             margin-top:40px;
@@ -110,7 +110,7 @@ $resp:768px;
                 &:first-child{
                     border-left: 2px solid #575757;
                 }
-                a{
+                .nav-item__letter{
                     display: block;
                     // background-color: $test;
                     text-align: center;
@@ -171,13 +171,13 @@ $resp:768px;
         padding:56px 25px 56px 25px;
         margin:0 auto 56px auto;
     }
-    h2{
+    .news-area__header{
         margin-bottom:40px;
         @include resp{
             margin-bottom:30px;
         }
     }
-    ul{
+    .news-list{
         width:712px;
         // background-color:#000;
         padding-bottom:80px;
@@ -187,7 +187,7 @@ $resp:768px;
             margin-left:0px;
             padding-bottom:0px;
         }
-        li{
+        .news-list-item{
             display: flex;
             margin-bottom:24px;
             &:last-child{
@@ -201,7 +201,7 @@ $resp:768px;
                     margin-bottom:0px;
                 }
             }
-            span{
+            .news-date{
             display: block;
             width:130px;
             height:28px;
@@ -225,6 +225,7 @@ $resp:768px;
                 width:540px;
                 margin-left:40px;
                 line-height:1.75;
+                text-decoration:underline;
                 @include resp{
                     width:100%;
                     margin-left:0;
@@ -242,7 +243,7 @@ $resp:768px;
         width:86%;
         margin:0 auto 122px auto;
     }
-    h2{
+    .features-area__header{
         margin-bottom: 75px;
         @include resp{
             margin-bottom:44px;
@@ -254,20 +255,16 @@ $resp:768px;
             display: block;
         }
         .features-image{
-            img{
-                width:360px;
-                @include resp{
-                    width:100%;
-                }
-            }
+            width:360px;
             margin-right: 56px;
             @include resp{
+                width:100%;
                 margin-right:0px;
                 margin-bottom:30px;
             }
         }
         .features-sentence{
-            h3{
+            .features-copy{
                 font-size:24px;
                 margin-bottom: 40px;
                 @include resp{
@@ -275,17 +272,15 @@ $resp:768px;
                     margin-bottom:48px;
                 }
             }
-            p{
+            .features-p{
                 width:665px;
                 line-height:1.6;
+                margin-bottom:24px;
                 @include resp{
                     width:100%;
                     font-size:16px;
                     line-height:1.75;
                 }
-            }
-            .features-p1{
-                margin-bottom:24px;
             }
         }
     }
@@ -296,7 +291,7 @@ $resp:768px;
         width:94%;
         margin:0 auto 222px auto;
     }
-    h2{
+    .subscription-area__header{
         margin-bottom: 50px;
         @include resp{
             margin-bottom:35px;
@@ -319,8 +314,8 @@ $resp:768px;
             display: block;
             width:100%;
         }
-        li{
-            a{ 
+        .product-list__item{
+            .product-item{
                 width:336px;
                 display: block;
                 padding-bottom: 24px;
@@ -329,7 +324,7 @@ $resp:768px;
                 text-align: center;
                 border:4px solid #c9e23f;
                 box-shadow: 0 3px 25px 3px rgba(0,0,0,.1);
-
+                // background-color: $test;
                 position: relative;
                 top:0px;
                 // ease-in:始めが早い ease-out:終わりが早い
@@ -350,7 +345,7 @@ $resp:768px;
                     margin-bottom:25px;
                     padding-bottom:0px;
                 }
-                img{
+                .product-item-img{
                     width:100%;
                     margin-bottom: 35px;
                 }
@@ -409,33 +404,35 @@ $resp:768px;
         }
     }
 }
-.item-area{
+.items-area{
     margin-bottom: 460px;
     @include resp{
         width:94%;
         margin: 0 auto 162px auto;
     }
-    h2{
+    .items-area__header{
         margin-bottom: 72px;
     }
-    ul{
+    .items-list{
         display: flex;
         flex-wrap: wrap;
         justify-content:center;
-        li{ 
-            margin-bottom:-2px;
+        .items-list__item{ 
             width:180px;
+            &:hover{
+                opacity: .8;
+            }
             @include resp{
                 width:33.3%;
-                margin-bottom:-2px;
             }
-            img{
+            .items-list__img{
+                vertical-align: bottom;
                 width:100%;
             }
         }
     }
 }
-footer{
+.takaosan-footer{
     .copyright{
         display: block;
         font-size:14px;
