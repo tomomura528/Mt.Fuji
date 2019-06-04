@@ -158,5 +158,14 @@
             <small class="copyright">COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
         </footer>
 </div><!-- /wrapper -->
+<script>
+        $('.toggle-btn').on('click', function(){
+            // console.log(11);
+            $('#global-nav').slideToggle();
+            $('html').toggleClass('hidden');
+            $('body').toggleClass('hidden');
+            return false;
+        });
+</script>
 </body>
 </html>

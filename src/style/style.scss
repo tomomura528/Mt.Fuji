@@ -11,6 +11,12 @@ $resp:768px;
     }
 }
 
+html.hidden,
+body.hidden{
+    overflow:hidden;
+    height:100%;
+}
+
 *{  
     box-sizing: border-box;
     color:$font-color;
@@ -64,7 +70,7 @@ $resp:768px;
                 display:inline-block;
                 width:33px;
                 height:24px;
-                position: fixed;
+                position: absolute;
                 top:22px;
                 right:5%;
                 z-index: 1;
@@ -95,20 +101,44 @@ $resp:768px;
     }
     #global-nav{
         @include resp{
+            // ハンバーガー
             display: none;
+            height:87.5vh;
+            position:absolute;
+            bottom:0px;
+            background-color: rgba(255,255,255,0.95);
+            z-index:2;
         }
         .nav-list{
             display: flex;
             width: 100%;
             margin-top:40px;
             // background-color: $test;
+            @include resp{
+                // ハンバーガー
+                margin-top:0;
+                display: block;
+            }
             .nav-item{
                 width: 180px;
                 height:25px;
                 // background-color: $test;
                 border-right: 2px solid #575757;
+                @include resp{
+                    // ハンバーガー
+                    width:100%;
+                    height:auto;
+                    border-right:none;
+                    border-bottom:1px solid #cccccc;
+                    text-align: center;
+                }
                 &:first-child{
                     border-left: 2px solid #575757;
+                    @include resp{
+                        // ハンバーガー
+                        border-left:none;
+                        border-top:1px solid #cccccc;
+                    }
                 }
                 .nav-item__letter{
                     display: block;
@@ -119,9 +149,20 @@ $resp:768px;
                     font-weight:600;
                     text-decoration: none;
                     color:#454545;
+                    @include resp{
+                        // ハンバーガー
+                        font-size:16px;
+                        padding:16px 0;
+                    }
                     &:hover{
                         color:#9aaf24;
                         background-color: #fafafa;
+                        // @include resp{
+                        //     // ハンバーガー
+                        //     // 【!!Question!!】hoverの内容を取り消すプロパティ調べる
+                        //     color:#454545;
+                        //     background-color:rgba(0,0,0,0,);
+                        // }
                     }
                 }
                 .here{
@@ -257,6 +298,7 @@ $resp:768px;
         .features-image{
             width:360px;
             margin-right: 56px;
+            flex-shrink:0;
             @include resp{
                 width:100%;
                 margin-right:0px;
