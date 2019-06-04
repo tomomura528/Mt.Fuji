@@ -103,9 +103,9 @@ body.hidden{
         @include resp{
             // ハンバーガー
             display: none;
-            height:87.5vh;
+            height:100vh;
             position:absolute;
-            bottom:0px;
+            top:70px;
             background-color: rgba(255,255,255,0.95);
             z-index:2;
         }
@@ -381,6 +381,9 @@ body.hidden{
                         background: rgb(201,226,63);
                         background: linear-gradient(90deg, rgba(201,226,63,1) 0%, rgba(71,227,220,1) 100%);
                     }
+                    @include resp{
+                        top:0px;
+                    }
                 }
                 @include resp{
                     width:100%;
@@ -461,8 +464,10 @@ body.hidden{
         justify-content:center;
         .items-list__item{ 
             width:180px;
+            transition:all .2s ease-in;
             &:hover{
                 opacity: .8;
+
             }
             @include resp{
                 width:33.3%;
